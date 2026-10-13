@@ -1,0 +1,6 @@
+{
+  "name": "Juan4All",
+  "description": "Cinematic movie and TV streaming discovery and viewing web app.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

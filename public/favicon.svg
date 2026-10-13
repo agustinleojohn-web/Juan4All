@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="favRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2a38"/>
+      <stop offset="50%" stop-color="#e50914"/>
+      <stop offset="100%" stop-color="#800000"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Container -->
+  <rect width="64" height="64" rx="14" fill="#0a0a0a"/>
+  <!-- Subtle Border -->
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#222222" stroke-width="2"/>
+  
+  <!-- Red Play Button representing the number 4 (No vertical line) -->
+  <path
+    d="M20 14 C20 11.8 22.4 10.4 24.3 11.5 L50.2 29.5 C52 30.7 52 33.3 50.2 34.5 L24.3 52.5 C22.4 53.6 20 52.2 20 50 Z"
+    fill="url(#favRed)"
+    stroke="#ff4d5a"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+  />
+</svg>

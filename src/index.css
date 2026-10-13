@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #101010;
+    --bg-header: #0A0A0A;
+    --bg-surface: #181818;
+    --bg-elevated: #222222;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B3B3B3;
+    --text-muted: #808080;
+    --border-color: #333333;
+    --accent: #800000;
+    --accent-hover: #9B111E;
+  }
+
+  html {
+    background-color: #101010;
+    color: #FFFFFF;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #101010;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Bebas Neue typography for titles and headings */
+  h1, h2, h3, .font-bebas, .heading-bebas {
+    font-family: 'Bebas Neue', sans-serif, system-ui;
+    letter-spacing: 0.04em;
+  }
+
+  /* Custom scrollbar for desktop */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #101010;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 0.5rem; /* rounded-lg */
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4a4a4a;
+  }
+}
+
+/* Utilities for no-scrollbar horizontal carousels with drag/touch support */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Support iOS safe area */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0rem);
+}
+
+/* ============================================================
+   SPOTLIGHT EFFECT:
+   When any card inside a .spotlight-group is hovered, all other
+   cards turn grayscale and dimmed, while hovered card stays full
+   color and scaled up.
+   ============================================================ */
+.spotlight-group:hover .spotlight-card:not(:hover) {
+  filter: grayscale(1) opacity(0.42);
+  transform: scale(0.975);
+  transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.spotlight-card {
+  transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, filter;
+}
+
+.spotlight-card:hover {
+  filter: grayscale(0) opacity(1) !important;
+  transform: scale(1.04) !important;
+  z-index: 30 !important;
+}

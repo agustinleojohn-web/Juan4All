@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#2a0508"/>
+      <stop offset="50%" stop-color="#120305"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </radialGradient>
+    
+    <!-- Red Play Button Gradient -->
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff1a2b"/>
+      <stop offset="50%" stop-color="#e50914"/>
+      <stop offset="100%" stop-color="#800000"/>
+    </linearGradient>
+
+    <!-- Crimson Glow Filter -->
+    <filter id="redGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Deep dark cinematic backdrop -->
+  <rect width="1200" height="630" fill="url(#bgGlow)"/>
+
+  <!-- Cinema grid & film strips motif in background -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="2">
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="510" x2="1200" y2="510"/>
+    <rect x="60" y="20" width="80" height="70" rx="6"/>
+    <rect x="180" y="20" width="80" height="70" rx="6"/>
+    <rect x="300" y="20" width="80" height="70" rx="6"/>
+    <rect x="420" y="20" width="80" height="70" rx="6"/>
+    <rect x="540" y="20" width="80" height="70" rx="6"/>
+    <rect x="660" y="20" width="80" height="70" rx="6"/>
+    <rect x="780" y="20" width="80" height="70" rx="6"/>
+    <rect x="900" y="20" width="80" height="70" rx="6"/>
+    <rect x="1020" y="20" width="80" height="70" rx="6"/>
+
+    <rect x="60" y="535" width="80" height="70" rx="6"/>
+    <rect x="180" y="535" width="80" height="70" rx="6"/>
+    <rect x="300" y="535" width="80" height="70" rx="6"/>
+    <rect x="420" y="535" width="80" height="70" rx="6"/>
+    <rect x="540" y="535" width="80" height="70" rx="6"/>
+    <rect x="660" y="535" width="80" height="70" rx="6"/>
+    <rect x="780" y="535" width="80" height="70" rx="6"/>
+    <rect x="900" y="535" width="80" height="70" rx="6"/>
+    <rect x="1020" y="535" width="80" height="70" rx="6"/>
+  </g>
+
+  <!-- Glowing Aura behind Logo -->
+  <circle cx="600" cy="260" r="180" fill="#800000" opacity="0.35" filter="url(#redGlow)" />
+
+  <!-- Main Brand Identity Group -->
+  <g transform="translate(600, 260)">
+    <!-- "JUAN" text in Bebas Neue font -->
+    <text x="-65" y="32" text-anchor="end" font-family="'Bebas Neue', Arial Black, Impact, sans-serif" font-size="130" font-weight="900" fill="#ffffff" letter-spacing="4">JUAN</text>
+
+    <!-- The Clean Red Playbutton "4" - ZERO vertical lines -->
+    <g transform="translate(-45, -55)">
+      <!-- Outer glow -->
+      <polygon points="12,8 82,55 12,102" fill="#ff1a2b" opacity="0.45" filter="url(#redGlow)"/>
+      <!-- Main Play Button Triangle representing 4 -->
+      <polygon points="12,8 82,55 12,102" fill="url(#redGrad)" stroke="#ff4d5a" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+
+    <!-- "ALL" text in Bebas Neue font -->
+    <text x="65" y="32" text-anchor="start" font-family="'Bebas Neue', Arial Black, Impact, sans-serif" font-size="130" font-weight="900" fill="#ffffff" letter-spacing="4">ALL</text>
+  </g>
+
+  <!-- Tagline & Features -->
+  <text x="600" y="375" text-anchor="middle" font-family="'Inter', sans-serif" font-size="28" font-weight="600" fill="#b3b3b3" letter-spacing="2">
+    WATCH MOVIES &amp; TV SERIES ONLINE
+  </text>
+
+  <!-- Badges row -->
+  <g transform="translate(600, 440)">
+    <!-- 4K ULTRA HD Badge -->
+    <rect x="-240" y="-18" width="105" height="36" rx="8" fill="#181818" stroke="#333333" stroke-width="2"/>
+    <text x="-187" y="6" text-anchor="middle" font-family="'Inter', sans-serif" font-size="14" font-weight="800" fill="#a855f7" letter-spacing="1">4K UHD</text>
+
+    <!-- FULL HD Badge -->
+    <rect x="-115" y="-18" width="80" height="36" rx="8" fill="#181818" stroke="#333333" stroke-width="2"/>
+    <text x="-75" y="6" text-anchor="middle" font-family="'Inter', sans-serif" font-size="14" font-weight="800" fill="#10b981" letter-spacing="1">HD</text>
+
+    <!-- AUTO-RESUME Badge -->
+    <rect x="-15" y="-18" width="135" height="36" rx="8" fill="#181818" stroke="#333333" stroke-width="2"/>
+    <text x="52" y="6" text-anchor="middle" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#ffffff" letter-spacing="1">AUTO-RESUME</text>
+
+    <!-- INSTANT STREAM Badge -->
+    <rect x="140" y="-18" width="120" height="36" rx="8" fill="#800000" stroke="#ff4d5a" stroke-width="1.5"/>
+    <text x="200" y="6" text-anchor="middle" font-family="'Inter', sans-serif" font-size="14" font-weight="800" fill="#ffffff" letter-spacing="1">NO SIGNUP</text>
+  </g>
+</svg>
