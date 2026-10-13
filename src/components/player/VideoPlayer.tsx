@@ -470,18 +470,26 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
               </div>
             )}
 
-            <iframe
-              key={`${currentSourceId}-${reloadKey}`}
-              ref={iframeRef}
-              src={embedUrl}
-              title={`${media.title}${episode ? ` - ${episode.title}` : ''} Player`}
-              className="absolute inset-0 w-full h-full border-0"
-              allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-              allowFullScreen
-              referrerPolicy="origin"
-              onLoad={handleIframeLoad}
-              onError={handleIframeError}
-            />
+           <div className="absolute inset-0">
+  <iframe
+    key={`${currentSourceId}-${reloadKey}`}
+    ref={iframeRef}
+    src={embedUrl}
+    title={`${media.title}${episode ? ` - ${episode.title}` : ''} Player`}
+    className="absolute inset-0 w-full h-full border-0"
+    allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+    allowFullScreen
+    referrerPolicy="origin"
+    onLoad={handleIframeLoad}
+    onError={handleIframeError}
+  />
+
+  {/* Blocks clicks on the embedded player */}
+  <div
+    className="absolute inset-0 z-10"
+    aria-hidden="true"
+  />
+</div>
           </>
         )}
       </div>
